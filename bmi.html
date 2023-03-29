@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bmi calculator</title>
+
+    <!--font awesome-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--icons-->
+    <script src="https://kit.fontawesome.com/d1e0a0909b.js" crossorigin="anonymous"></script>
+
+    <!--styling-->
+    <link rel="stylesheet" href="bmi.css">
+</head>
+<body>
+
+    <!--header section-->
+    <div class="header">
+        <div class="logo">
+        <h1>K<span class="special-1">N</span><span class="special-2">H</span></h1>
+        </div>
+        <div class="navlinks">
+        <a href="#">Home</a>
+        <a href="#">Contacts</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        </div>
+    </div>
+
+    <!--container-1-->
+        <div class="container">
+            <h2>BMI CALCULATOR</h2>
+          <div class="content">
+            <p>Height in meters:</p>
+            <input class="height-input" type="text" required>
+            <p>Weight in Kilograms:</p>
+            <input class="weight-input" type="text" required>
+            <button class="calculate">Calculate</button>
+          </div>
+        </div>
+
+        <!--container 2-->
+        <div class="result-container">
+        <div class="container-2">
+            <div class="icon-close">
+            <i class="fa fa-times"></i>
+            </div>
+            <div class="nav">
+            <h4>Please click on calculate after you have entered your height and Weight to check on your BMi result.
+                if you find it not pleasing, just click on the link below
+                to get in touch with our doctor.<a href="#">Contacts</a>
+            </h4>
+            </div>
+        <h3 class="result"></h3>
+        <p class="statement"></p>
+    </div>
+    </div>
+
+    <!--icon section-->
+    <div class="icon-section">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-solid fa-phone-volume"></i></a>
+    </div>
+
+    <!--javascript-->
+ <script src="bmi.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+</body>
+</html>

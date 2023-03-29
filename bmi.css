@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    background-image: url(https://www.eahealth.org/sites/www.eahealth.org/files/content/organisations/images/2018-02-25/Kenyata%20photos%201.jpg);
+    /*background-color: #fff;*/
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    z-index: 99;
+    padding: 15px 100px;
+}
+.header .logo{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+}
+.header .logo h1{
+ color: red;
+ font-size: 2em;
+ user-select: none;
+}
+.logo .special-1{
+    color: #fff;
+    font-size: 2em;
+}
+.logo .special-2{
+    color: red;
+    font-size: 2em
+}
+.header .navlinks{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 60%;
+}
+.header .navlinks a{
+    margin-left: 20px;
+    margin-right: 30px;
+    color:#fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: 550;
+    position: relative;
+}
+.header .navlinks a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: gold;
+    border-radius: 5px;
+    left: 0;
+    bottom: -6px;
+    transform-origin: left;
+    transform: scalex(0);
+    transition: transform .5s;
+}
+
+.header .navlinks a:hover::after{
+    transform: scaleX(1);
+    /*color: gold;*/
+}
+
+
+.container{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    border: 3px solid rgb(14, 95, 95);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.container h2{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    color: #fff;
+}
+
+.content p{
+    display: block;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    color: red;
+    margin-left: 10px;
+}
+.content .height-input{
+    margin-top: 20px;
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    margin: 20px;
+    font-size: 1.3em;
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+.content .weight-input{
+    margin-top: 20px;
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    cursor: pointer;
+    margin: 20px;
+    background: black;
+    color: #fff;
+}
+.calculate{
+    margin-left: 35px;
+    width: 130px;
+    height: 35px;
+    outline: none;
+    background: blue;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.3em;
+    cursor: pointer;
+    font-weight: 400;
+    transition: .5s;
+
+}
+.calculate:hover{
+    background-color: chocolate;
+    color: white;
+}
+.container-2{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    padding: 5px;
+    border: 3px solid transparent;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    transition: .5s;
+
+    animation-name: animatecontainer-2;
+    animation-duration: .4s;
+}
+
+.container-2 h4{
+    color: grey;
+    text-align: none;
+    position: absolute;
+    top: 0;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    font-size: 1em;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.container-2 .nav a{
+    color: blue;
+    font-size: 1em;
+    margin-left: 5px;
+}
+.nav a:hover{
+    color: red;
+}
+.container-2 .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+}
+.icon-close:hover{
+    background-color: black;
+    color: white;
+}
+
+.container-2 .result{
+    text-align: center;
+    color: aqua;
+    font-size: 1.2em;
+    margin-top: 30px;
+}
+.container-2 .statement{
+    color: red;
+    font-weight: 700;
+    font-style: inherit;
+    font-size: 1.2em;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.result-container{
+    position: fixed;
+    display: none;
+    z-index: 1;
+}
+.icon-section{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.icon-section .fa-facebook{
+    color: blue;
+    font-size: 2em;
+    cursor: pointer;
+}
+.icon-section .fa-youtube
+{
+    margin-left: 35px;
+    color: red;
+    font-size: 2em;
+    cursor: pointer;
+}
+.icon-section .fa-twitter
+{
+    margin-left: 35px;
+    color: blue;
+    font-size: 2em;
+    cursor: pointer;
+}
+.icon-section .fa-phone-volume{
+    margin-left: 35px;
+    color: green;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+@media(max-width: 700px) {
+    .header h1{
+        margin-left: 2px;
+    }
+    .header .navlinks{
+        display: flex;
+        flex-direction: column-reverse;
+        left: 50%;
+    }
+    .header{
+        position: absolute;
+    }
+    .container h2{
+        margin-bottom: 30px;
+    }
+    .header{
+        display:flex;
+        justify-content:space-between;
+        padding:20px 20px;
+    }
+
+}
